@@ -11,10 +11,10 @@ html, body{
 .header{
     background-image: url(./img/hero2.jpg);
     background-repeat: no-repeat;
-    background-position: 20% 40%;
+    background-position: 40% 40%;
     background-attachment: scroll;
     background-size: cover;
-    height: 50vh;
+    height: 100vh;
     margin: 0;
     padding-top: 60vh;
 }
@@ -60,7 +60,7 @@ html, body{
 .section{
     margin: 0 auto;
     max-width: 600px;
-    padding: 1em 2.4em;
+    padding: 2em 2.4em;
 }
 .sub-heading{
     font-family: 'Caveat', cursive;
