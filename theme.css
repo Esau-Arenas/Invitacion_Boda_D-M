@@ -82,6 +82,28 @@ html, body{
     width: 100%
 }
 
+#contador {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex; /* Establece la disposición de flexbox */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    
+  }
+
+  #mes, #dia, #hora, #minuto, #segundo {
+      font-family: Playfair Display, serif;
+      padding: 1.5%;
+      border: 2px solid #ccc;
+      border-radius: 5px; /* Añade esquinas redondeadas */
+  }
+
+  #contador > div {
+    margin-right: 20px; /* Espaciado entre los elementos */
+  }
+
 @media only screen and (max-width: 600px) {
     .heading {
         font-size: 4em;

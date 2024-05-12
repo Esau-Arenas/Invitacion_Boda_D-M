@@ -26,8 +26,14 @@
       <div class="details">
         <i class="fas fa-calendar-check"></i>
         <h3 class="details-heading">Cuando</h3>
+        <div id="contador">
+          <div id="dia"></div>
+          <div id="hora"></div>
+          <div id="minuto"></div>
+          <div id="segundo"></div> 
+        </div>
         <p>Diciembre 14, 2024</p>
-        <a title="Agregar a Calendario" rel="noopener" href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=NTg2NTk3MWsxY2VpazZsa25mYWdqc2YxcWcgZWFyZW5hczY2NUBt&tmsrc=earenas665%40gmail.com" target="_blank" rel="nofollow">Agregar a Calendario</a>
+        <a class="btn btn-secondary" title="Agregar a Calendario" rel="noopener" href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=NTg2NTk3MWsxY2VpazZsa25mYWdqc2YxcWcgZWFyZW5hczY2NUBt&tmsrc=earenas665%40gmail.com" target="_blank" rel="nofollow">Agregar a Calendario</a>
       </div>
       <div class="details">
         <i class="fas fa-map-marked-alt"></i>
@@ -96,7 +102,53 @@
       // Abrir la ventana de WhatsApp con el mensaje prellenado
       window.open(url, '_blank');
   });
+
 </script>
 
+<!-- Contador de dias -->
+<script>
+  // Define la fecha objetivo
+  const fechaObjetivo = new Date('2024-12-14');
+
+  function actualizarContador() {
+    // Obtiene la fecha actual
+    const fechaActual = new Date();
+
+    // Calcula la diferencia en milisegundos entre la fecha actual y la fecha objetivo
+    let diferencia = fechaObjetivo - fechaActual;
+
+    // Calcula los componentes de tiempo
+    const segundos = Math.floor(diferencia / 1000);
+    diferencia %= 1000;
+    const minutos = Math.floor(segundos / 60);
+    const horas = Math.floor(minutos / 60);
+    const dias = Math.floor(horas / 24);
+
+    // Actualiza el contenido del elemento HTML con el contador de días
+    document.getElementById('dia').innerHTML = `
+      <div>${dias}</div>
+      <div>Días</div>
+    `;
+    document.getElementById('hora').innerHTML = `
+      <div>${horas % 24}</div>
+      <div>Hrs</div>
+    `;
+    document.getElementById('minuto').innerHTML = `
+      <div>${minutos % 60}</div>
+      <div>Mins</div>
+    `;
+    document.getElementById('segundo').innerHTML = `
+      <div>${segundos % 60}</div>
+      <div>Secs</div>
+    `;
+  }
+  
+
+  // Llama a la función para actualizar el contador cada segundo
+  setInterval(actualizarContador, 1000);
+
+  // Llama a la función para actualizar el contador al cargar la página
+  actualizarContador();
+</script>
   </body>
 </html>
