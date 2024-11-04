@@ -9,7 +9,8 @@ html, body{
     text-align: center;
 }
 .header{
-    background-image: url(./img/hero2.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(./img/3.jpg);
+    /*background-image: url(./img/hero2.jpg);*/
     background-repeat: no-repeat;
     background-position: 40% 40%;
     background-attachment: scroll;
@@ -30,7 +31,7 @@ html, body{
     color: #fff;
     display: block;
     font-family: 'Caveat', cursive;
-    font-size: .6em;
+    font-size: .5em;
 }
 .fixed-button{
     background: rgba(20,20,20,.5);
@@ -70,6 +71,7 @@ html, body{
 .details{
     margin: 0 auto 8em;
 }
+
 .details-heading{
     font-weight: bold;
     text-transform: uppercase;
@@ -80,6 +82,27 @@ html, body{
 }
 .resort-image{
     width: 100%
+}
+
+.footer {
+    background-color: #349251; /* Color de fondo oscuro */
+    color: white !important; /* Asegura que el color de texto sea blanco */
+    padding: 20px;
+}
+  
+.footer p {
+    color: white !important;
+}
+  
+.footer a.social-link {
+    color: #ffffff !important; /* Color blanco para los enlaces de iconos */
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1.5rem; /* Ajusta el tamaño del icono si es necesario */
+}
+  
+.footer a.social-link:hover {
+    color: #ccc !important; /* Color más claro en el hover */
 }
 
 #contador {
