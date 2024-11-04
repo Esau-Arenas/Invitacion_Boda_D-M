@@ -68,9 +68,22 @@ html, body{
     font-size: 3em;
     margin-top: 2em;
 }
-.details{
-    margin: 0 auto 8em;
+.details_cuando{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/5.jpg);
+    /*background-image: url(./img/hero2.jpg);*/
+    background-repeat: no-repeat;
+    background-position: 40% 40%;
+    background-attachment: scroll;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+    padding-top: 60vh;
+    color: white !important;
+    i,p {
+        color: white !important;
+    }
 }
+
 
 .details-heading{
     font-weight: bold;
@@ -108,20 +121,30 @@ html, body{
 #contador {
     font-family: Arial, sans-serif;
     text-align: center;
+    color: #fff; /* Color del texto de todo el contador */
     font-size: 24px;
     margin-top: 10px;
     margin-bottom: 10px;
     display: flex; /* Establece la disposición de flexbox */
     justify-content: center; /* Centra los elementos horizontalmente */
-    
-  }
+}
 
-  #mes, #dia, #hora, #minuto, #segundo {
+#contador > div {
+    color: #fff; /* Asegúrate de que cada elemento hijo también tenga el color blanco */
+    padding: 1.5%; /* Opcional: añade padding a los elementos hijos */
+    border: 2px solid #ccc; /* Mantener el borde como está */
+    border-radius: 5px; /* Esquinas redondeadas */
+    margin-right: 20px; /* Espaciado entre los elementos */
+}
+
+
+#mes, #dia, #hora, #minuto, #segundo {
       font-family: Playfair Display, serif;
       padding: 1.5%;
       border: 2px solid #ccc;
+      color: #fff;
       border-radius: 5px; /* Añade esquinas redondeadas */
-  }
+}
 
   /* Establece un tamaño fijo para las imágenes */
   .carousel-item img {
