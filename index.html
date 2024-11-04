@@ -159,20 +159,20 @@
 
     // Actualiza el contenido del elemento HTML con el contador de días
     document.getElementById('dia').innerHTML = `
-      <div>${dias}</div>
-      <div>Días</div>
+      <div><p>${dias}</p></div>
+      <div><p>Días</p></div>
     `;
     document.getElementById('hora').innerHTML = `
-      <div>${horas % 24}</div>
-      <div>Hrs</div>
+      <div><p>${horas % 24}</p></div>
+      <div><p>Hrs</p></div>
     `;
     document.getElementById('minuto').innerHTML = `
-      <div>${minutos % 60}</div>
-      <div>Mins</div>
+      <div><p>${minutos % 60}</p></div>
+      <div><p>Mins</p></div>
     `;
     document.getElementById('segundo').innerHTML = `
-      <div>${segundos % 60}</div>
-      <div>Secs</div>
+      <div><p>${segundos % 60}</p></div>
+      <div><p>Secs</p></div>
     `;
   }
   
