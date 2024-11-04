@@ -41,7 +41,7 @@
 
           <div class="carousel-item">
             <img src="./img/7.jpeg" class="card-img-top" alt="...">
-        |</div>
+        </div>
 
           <div class="carousel-item">
               <img src="./img/hero3.jpg" class="card-img-top" alt="...">
@@ -126,7 +126,7 @@
           </div>
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Cantidad de personas</label>
-            <input type="text" class="form-control" id="Cantidad">
+            <input type="number" class="form-control" id="Cantidad" min="1" step="1">
           </div>
           <button type="submit" class="btn btn-outline-success">Confirmar</button>
         </form>
@@ -149,8 +149,14 @@
 <script>
   document.getElementById('rsvpForm').addEventListener('submit', function(event) {
       event.preventDefault();
-      const nombre = document.getElementById('Nombre').value;
-      const cantidad = document.getElementById('Cantidad').value;
+      const nombre = document.getElementById('Nombre').value.trim();
+      const cantidad = document.getElementById('Cantidad').value.trim();
+
+      // Verifica que los campos no estén vacíos
+      if (!nombre || !cantidad) {
+          alert("Por favor, completa todos los campos antes de confirmar.");
+          return;
+      }
 
       const mensaje = `*Confirmación de Asistencia*%0ABoda Dany y Mishell%0A%0ANombre: ${nombre}%0ACantidad de personas: ${cantidad}`;
 
